@@ -5,7 +5,7 @@ import boto3
 session = boto3.Session(region_name='ca-central-1') 
 polly_client = session.client('polly')
 
-def text_to_speech(text, voice_id='Kevin', output_format='mp3'):
+def text_to_speech(text, voice_id='Amy', output_format='mp3'):
     response = polly_client.synthesize_speech(
         Text=text,
         OutputFormat=output_format,
